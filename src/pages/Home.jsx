@@ -9,7 +9,9 @@ function Home() {
     useTodo();
   //geting todos from local storage
   useEffect(() => {
-    setTodos(JSON.parse(localStorage.getItem("todos")));
+    if (localStorage.getItem("todos") !== null) {
+      setTodos(JSON.parse(localStorage.getItem("todos")));
+    }
   }, []);
 
   // updating todos and load to local storage
