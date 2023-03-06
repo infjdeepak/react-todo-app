@@ -4,7 +4,6 @@ import { useTodo } from "../context/TodoContext";
 
 function TodoList() {
   const { filteredTodos } = useTodo();
-  console.log(filteredTodos);
   return (
     <TodoListStyle>
       {filteredTodos?.map((todo) => (
