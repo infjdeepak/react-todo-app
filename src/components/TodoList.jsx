@@ -4,10 +4,10 @@ import { useTodo } from "../context/TodoContext";
 
 function TodoList() {
   const { filteredTodos } = useTodo();
-
+  console.log(filteredTodos);
   return (
     <TodoListStyle>
-      {filteredTodos.map((todo) => (
+      {filteredTodos?.map((todo) => (
         <Todo todo={todo} key={todo.id} />
       ))}
     </TodoListStyle>
